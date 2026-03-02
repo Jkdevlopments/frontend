@@ -361,7 +361,7 @@ const Home = ({ user, setUser }) => {
       try {
         setLoading(true);
         const res = await fetch(
-          `http://localhost:5000/api/users/all/${user.id}`
+          `://localhost:5000/api/users/all/${user.id}`
         );
         const data = await res.json();
         
@@ -370,7 +370,7 @@ const Home = ({ user, setUser }) => {
             data.users.map(async (u) => {
               try {
                 const lastMsgRes = await fetch(
-                  `http://localhost:5000/api/messages/last/${user.id}/${u.id}`
+                  `://localhost:5000/api/messages/last/${user.id}/${u.id}`
                 );
                 const lastMsgData = await lastMsgRes.json();
                 return { 
@@ -410,7 +410,7 @@ const Home = ({ user, setUser }) => {
   const fetchMessages = async (receiverId) => {
     try {
       const res = await fetch(
-        `http://localhost:5000/api/messages/${user.id}/${receiverId}`
+        `://localhost:5000/api/messages/${user.id}/${receiverId}`
       );
       const data = await res.json();
 
@@ -443,7 +443,7 @@ const Home = ({ user, setUser }) => {
   /* ================= CREATE NEW CHAT ================= */
   const createNewChat = async (receiverId) => {
     try {
-      await fetch('http://localhost:5000/api/chats/create', {
+      await fetch('://localhost:5000/api/chats/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -878,7 +878,7 @@ const Home = ({ user, setUser }) => {
         });
       }, 200);
 
-      const res = await fetch("http://localhost:5000/api/analyze-media", {
+      const res = await fetch("https://dbackend-1-9nrv.onrender.com/api/analyze-media", {
         method: "POST",
         body: formData,
       });
@@ -1071,7 +1071,7 @@ const Home = ({ user, setUser }) => {
         });
       }, 200);
 
-      const res = await fetch("http://localhost:5000/api/analyze-media", {
+      const res = await fetch("https://dbackend-1-9nrv.onrender.com/api/analyze-media", {
         method: "POST",
         body: formData,
       });
@@ -1184,7 +1184,7 @@ const Home = ({ user, setUser }) => {
       
       if (isCallActive) endCall();
       
-      await fetch("http://localhost:5000/api/logout", {
+      await fetch("https://dbackend-1-9nrv.onrender.com/api/logout", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
