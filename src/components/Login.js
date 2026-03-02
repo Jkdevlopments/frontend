@@ -25,7 +25,7 @@ function Login({ onLogin }) {
     const endpoint = isLogin ? 'login' : 'register';
     
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/${endpoint}`, {
+      const response = await fetch(`https://dbackend-1-9nrv.onrender.com/api/auth/${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
