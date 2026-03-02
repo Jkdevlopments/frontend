@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from "react";
 import { io } from "socket.io-client";
 import "./Home.css";
 
-const socket = io("http://localhost:5000");
+const socket = io("https://dbackend-1-9nrv.onrender.com/");
 
 const Home = ({ user, setUser }) => {
   const [selectedChat, setSelectedChat] = useState(null);
