@@ -1,0 +1,141 @@
+/* src/components/Login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #00a884;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 222px;
+  background: #00897b;
+  z-index: 0;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  z-index: 1;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-box h2 {
+  margin-bottom: 30px;
+  color: #41525d;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.whatsapp-logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.whatsapp-logo svg {
+  width: 80px;
+  height: 80px;
+  fill: #00a884;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-box input {
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border: 2px solid #e9edef;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s;
+  background: #fafafa;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #00a884;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(0, 168, 132, 0.1);
+}
+
+.login-box button {
+  padding: 15px;
+  background: #00a884;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+}
+
+.login-box button:hover:not(:disabled) {
+  background: #00897b;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(0, 168, 132, 0.3);
+}
+
+.login-box button:disabled {
+  background: #b3e6db;
+  cursor: not-allowed;
+}
+
+.login-box .error {
+  color: #f15c5c;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 14px;
+  background: #ffebee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-box p {
+  margin-top: 20px;
+  text-align: center;
+  color: #00897b;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.login-box p:hover {
+  text-decoration: underline;
+}
+
+.login-footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #8696a0;
+  font-size: 12px;
+}
