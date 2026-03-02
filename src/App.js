@@ -17,7 +17,7 @@ function App() {
       if (token && savedUser) {
         try {
           // Verify token with backend
-          const response = await fetch('http://localhost:5000/api/verify-token', {
+          const response = await fetch('https://dbackend-1-9nrv.onrender.com//api/verify-token', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
